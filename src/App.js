@@ -38,10 +38,22 @@ const App = (props) => {
     });
   };
 
+  const style = {
+    backgroundColor: "white",
+    font: "inherit",
+    border: "3px solid black",
+    padding: "8px",
+    margin: "5px",
+  };
+
   return (
     <div className="App">
-      <h1> Hi, I 'm React App</h1> <p> This is really working </p>{" "}
-      <button onClick={switchNameHandler}> Switch Name </button>{" "}
+      <h1> Hi, I 'm React App</h1>
+      <p> This is really working </p>{" "}
+      <button style={style} onClick={switchNameHandler}>
+        {" "}
+        Switch Name{" "}
+      </button>{" "}
       <Person
         name={personsState.persons[0].name}
         age={personsState.persons[0].age}
@@ -61,5 +73,4 @@ const App = (props) => {
     </div>
   );
 };
-
 export default App;
